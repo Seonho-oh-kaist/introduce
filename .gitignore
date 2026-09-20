@@ -1,0 +1,10 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.db
+.env
+
+# OS / 에디터
+.DS_Store
+.vscode/
