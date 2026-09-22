@@ -4,7 +4,7 @@
 //  · Vercel 등 인터넷 주소에서 열면     → RENDER_URL
 // 끝에 / 를 붙이지 않습니다.
 // ─────────────────────────────────────────────────────────────
-const RENDER_URL = "https://YOUR-SERVICE.onrender.com";
+const RENDER_URL = "https://introduce-e129.onrender.com";
 
 const isLocal = ["localhost", "127.0.0.1"].includes(location.hostname) || location.protocol === "file:";
 window.API_URL = isLocal ? "http://localhost:8000" : RENDER_URL;
