@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>오선호 · 자기소개</title>
   <meta name="description" content="금융 시스템을 만들던 개발자, 이제 금융 데이터를 연구합니다. 오선호의 자기소개 페이지.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polyline points='3,26 11,18 17,21 29,6' fill='none' stroke='%23D1343F' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polyline points='3,26 11,18 17,21 29,6' fill='none' stroke='%23E03A3E' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/></svg>">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,20 +13,27 @@
   <a class="skip" href="#main">본문으로 건너뛰기</a>
 
   <header class="top">
-    <span class="top-name">오선호</span>
-    <nav aria-label="페이지 안 이동">
-      <a href="#about">소개</a>
-      <a href="#path">경력·학력</a>
-      <a href="#api">API 연동</a>
-    </nav>
+    <div class="top-inner">
+      <a class="top-name" href="#main">오선호</a>
+      <nav aria-label="페이지 안 이동">
+        <a href="#about">소개</a>
+        <a href="#path">경력</a>
+        <a href="#play" class="nav-hot">게임</a>
+        <a href="#api">방명록</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <!-- ── 히어로 ── -->
+    <!-- ══ 히어로 ══ -->
     <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow"><span class="live" aria-hidden="true"></span>유안타증권 소프트웨어 엔지니어 · KAIST 디지털금융 MBA</p>
       <h1 id="hero-title">오선호</h1>
-      <p class="hero-en" lang="en">Seon Ho Oh</p>
-      <p class="hero-line">금융 시스템을 만들던 개발자,<br>이제 금융 데이터를 연구합니다.</p>
+      <p class="hero-line">금융 시스템을 만들던 개발자,<br>이제 <em>금융 데이터</em>를 연구합니다.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#play">게임하고 랭킹 올리기</a>
+        <a class="btn btn-ghost" href="#about">소개 읽기</a>
+      </div>
 
       <figure class="chart">
         <svg id="career-chart" viewBox="0 0 800 260" role="img"
@@ -40,133 +47,202 @@
       </figure>
     </section>
 
-    <!-- ── 소개 ── -->
-    <section id="about" class="block" aria-labelledby="about-title">
-      <h2 id="about-title">소개</h2>
-      <div class="block-body prose">
-        <p>
-          증권사 정보시스템팀에서 카드·계좌 시스템을 개발하고 있습니다.
-          그전에는 펀드회계 시스템을 Pro*C와 Oracle로 다뤘습니다.
-          매일 돈이 흐르는 시스템을 만지다 보니, 그 돈이 어떤 원리로 값이 매겨지는지가 궁금해졌습니다.
-        </p>
-        <p>
-          그래서 2026년 봄부터 KAIST 디지털금융 MBA에서 재무 데이터베이스와 계량 금융을 공부하고,
-          WRDS의 Compustat·CRSP·TAQ 데이터로 실증 자산가격 연구를 하고 있습니다.
-          수업에서 배운 것은 되도록 직접 만들어 보면서 익힙니다.
-        </p>
-
-        <h3>관심 있는 것</h3>
-        <ul class="tags">
-          <li>퀀트 금융</li>
-          <li>실증 자산가격결정</li>
-          <li>한국 금융 규제</li>
-          <li>콘텐츠 자동화 (Make.com)</li>
-          <li>음원 마스터링</li>
-        </ul>
-
-        <h3>일 밖에서</h3>
-        <p>
-          K-뷰티 브랜드 <strong>UN:NIE</strong>를 운영하며 인스타그램
-          <a href="https://www.instagram.com/unnie_kr_official/" target="_blank" rel="noopener">@unnie_kr_official</a>에
-          카드뉴스를 올립니다. 반복되는 제작 과정은 자동화 도구로 묶어 두는 편입니다.
-        </p>
+    <!-- ══ 소개 ══ -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="section-head">
+        <h2 id="about-title">소개</h2>
+      </div>
+      <div class="about-grid">
+        <div class="prose">
+          <p class="big">
+            증권사 정보시스템팀에서 카드·계좌 시스템을 개발합니다.
+            매일 돈이 흐르는 시스템을 만지다 보니, 그 돈이 어떤 원리로 값이 매겨지는지가 궁금해졌습니다.
+          </p>
+          <p>
+            그전에는 펀드회계 시스템을 Pro*C와 Oracle로 다뤘고,
+            2026년 봄부터 KAIST 디지털금융 MBA에서 재무 데이터베이스와 계량 금융을 공부하며
+            WRDS의 Compustat·CRSP·TAQ 데이터로 실증 자산가격 연구를 하고 있습니다.
+            배운 것은 되도록 직접 만들어 보면서 익힙니다.
+          </p>
+        </div>
+        <aside class="facts">
+          <div class="fact">
+            <h3>관심 있는 것</h3>
+            <ul class="tags">
+              <li>퀀트 금융</li>
+              <li>실증 자산가격결정</li>
+              <li>한국 금융 규제</li>
+              <li>콘텐츠 자동화</li>
+              <li>음원 마스터링</li>
+            </ul>
+          </div>
+          <div class="fact">
+            <h3>일 밖에서</h3>
+            <p>
+              K-뷰티 브랜드 <strong>UN:NIE</strong>를 운영하며
+              <a href="https://www.instagram.com/unnie_kr_official/" target="_blank" rel="noopener">@unnie_kr_official</a>에
+              카드뉴스를 올립니다.
+            </p>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <!-- ── 경력·학력 ── -->
-    <section id="path" class="block" aria-labelledby="path-title">
-      <h2 id="path-title">경력·학력</h2>
-      <div class="block-body">
-        <ol class="timeline">
-          <li>
-            <span class="when">2026.03 – 현재</span>
-            <span class="what"><strong>KAIST</strong> 디지털금융 MBA (DFMBA)</span>
-          </li>
-          <li>
-            <span class="when">2023.09 – 현재</span>
-            <span class="what"><strong>유안타증권</strong> 정보시스템팀 주임, 소프트웨어 엔지니어<br>
-              <small>카드·계좌 시스템 · Java, Oracle, Linux</small></span>
-          </li>
-          <li>
-            <span class="when">2022.01 – 2023.09</span>
-            <span class="what"><strong>한국펀드파트너스</strong> 소프트웨어 엔지니어<br>
-              <small>펀드회계 시스템 · Pro*C, Oracle</small></span>
-          </li>
-          <li>
-            <span class="when">2015 – 2021</span>
-            <span class="what"><strong>광운대학교</strong> 전자공학 학사</span>
-          </li>
-        </ol>
+    <!-- ══ 경력·학력 ══ -->
+    <section id="path" class="section" aria-labelledby="path-title">
+      <div class="section-head">
+        <h2 id="path-title">경력·학력</h2>
+      </div>
+      <ol class="timeline">
+        <li>
+          <span class="when">2026.03 — 현재</span>
+          <div class="what"><strong>KAIST</strong><span>디지털금융 MBA (DFMBA)</span></div>
+        </li>
+        <li>
+          <span class="when">2023.09 — 현재</span>
+          <div class="what"><strong>유안타증권</strong><span>정보시스템팀 주임, 소프트웨어 엔지니어</span>
+            <small>카드·계좌 시스템 · Java, Oracle, Linux</small></div>
+        </li>
+        <li>
+          <span class="when">2022.01 — 2023.09</span>
+          <div class="what"><strong>한국펀드파트너스</strong><span>소프트웨어 엔지니어</span>
+            <small>펀드회계 시스템 · Pro*C, Oracle</small></div>
+        </li>
+        <li>
+          <span class="when">2015 — 2021</span>
+          <div class="what"><strong>광운대학교</strong><span>전자공학 학사</span></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ══ 게임 ══ -->
+    <section id="play" class="section" aria-labelledby="play-title">
+      <div class="section-head">
+        <h2 id="play-title">잠깐 놀다 가세요</h2>
+        <p class="deck">기록은 서버에 저장되고, 모든 방문자가 같은 랭킹을 봅니다. 1등 자리를 빼앗아 보세요.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="게임 고르기">
+        <button role="tab" id="tab-click" aria-controls="panel-click" aria-selected="true">
+          <span class="tab-emoji" aria-hidden="true">🚀</span>10초 매수 러시
+        </button>
+        <button role="tab" id="tab-memory" aria-controls="panel-memory" aria-selected="false" tabindex="-1">
+          <span class="tab-emoji" aria-hidden="true">🃏</span>밈 카드 맞추기
+        </button>
+      </div>
+
+      <!-- 게임 1: 10초 매수 러시 -->
+      <div class="game" role="tabpanel" id="panel-click" aria-labelledby="tab-click">
+        <div class="game-main card">
+          <div class="stats">
+            <div class="stat"><span class="stat-num" id="rush-count">0</span><span class="stat-lbl">체결</span></div>
+            <div class="stat"><span class="stat-num" id="rush-time">10.0</span><span class="stat-lbl">남은 초</span></div>
+            <div class="stat"><span class="stat-num up" id="rush-price">10,000</span><span class="stat-lbl" id="rush-chg">+0.00%</span></div>
+          </div>
+          <div class="rush-stage">
+            <canvas id="rush-chart" aria-hidden="true"></canvas>
+            <div class="timebar" aria-hidden="true"><span id="rush-bar"></span></div>
+          </div>
+          <div id="rush-play" class="play-area">
+            <button id="rush-btn" class="buy" type="button">매수</button>
+            <p class="hint">첫 클릭부터 10초가 흐릅니다. 누를수록 주가가 오릅니다.<span class="kbd"> 키보드는 스페이스바.</span></p>
+          </div>
+          <div id="rush-result" class="result" hidden></div>
+        </div>
+        <aside class="board card" aria-labelledby="board-click-title">
+          <div class="board-head">
+            <h3 id="board-click-title">체결왕 TOP 10</h3>
+            <code class="endpoint">GET /scores/click</code>
+          </div>
+          <ol class="board-list" id="board-click"><li class="empty">불러오는 중</li></ol>
+          <p class="board-note" data-storage-note></p>
+        </aside>
+      </div>
+
+      <!-- 게임 2: 밈 카드 맞추기 -->
+      <div class="game" role="tabpanel" id="panel-memory" aria-labelledby="tab-memory" hidden>
+        <div class="game-main card">
+          <div class="stats">
+            <div class="stat"><span class="stat-num" id="mem-time">0.0</span><span class="stat-lbl">초</span></div>
+            <div class="stat"><span class="stat-num" id="mem-moves">0</span><span class="stat-lbl">시도</span></div>
+            <div class="stat"><span class="stat-num" id="mem-pairs">0/8</span><span class="stat-lbl">맞춘 쌍</span></div>
+          </div>
+          <div id="mem-board" class="mem-board" aria-label="카드 16장"></div>
+          <p id="mem-quote" class="mem-quote" aria-live="polite">같은 카드 두 장을 찾으면 뜻풀이가 나옵니다.</p>
+          <div id="mem-result" class="result" hidden></div>
+        </div>
+        <aside class="board card" aria-labelledby="board-memory-title">
+          <div class="board-head">
+            <h3 id="board-memory-title">기억력 TOP 10</h3>
+            <code class="endpoint">GET /scores/memory</code>
+          </div>
+          <ol class="board-list" id="board-memory"><li class="empty">불러오는 중</li></ol>
+          <p class="board-note" data-storage-note></p>
+        </aside>
       </div>
     </section>
 
-    <!-- ── API 연동 실습 ── -->
-    <section id="api" class="block api" aria-labelledby="api-title">
-      <h2 id="api-title">API 연동</h2>
-      <div class="block-body">
-        <p class="lead">
-          이 영역은 Render에 배포한 FastAPI 서버에서 데이터를 받아 와 그립니다.
-          위쪽 소개는 페이지에 직접 쓴 HTML이고, 아래는 서버 응답입니다.
-        </p>
+    <!-- ══ API 연동 · 방명록 ══ -->
+    <section id="api" class="section" aria-labelledby="api-title">
+      <div class="section-head">
+        <h2 id="api-title">방명록 · API 연동</h2>
+        <p class="deck">이 페이지는 Vercel에, 데이터는 Render의 FastAPI 서버에 있습니다. 게임 랭킹과 방명록 모두 이 서버를 호출합니다.</p>
+      </div>
 
-        <div class="status" id="status" role="status" aria-live="polite">
-          <span class="dot" aria-hidden="true"></span>
-          <span id="status-text">서버 상태를 확인하고 있습니다.</span>
-        </div>
-        <p class="api-links">
-          <a id="docs-link" href="#" target="_blank" rel="noopener">Swagger UI에서 직접 테스트하기</a>
-          <span class="api-base">API 주소: <code id="api-base"></code></span>
-        </p>
+      <div class="status card" id="status" role="status" aria-live="polite">
+        <span class="dot" aria-hidden="true"></span>
+        <span id="status-text">서버 상태를 확인하고 있습니다.</span>
+        <a id="docs-link" class="status-link" href="#" target="_blank" rel="noopener">Swagger UI ↗</a>
+      </div>
 
-        <!-- 프로필 -->
-        <div class="panel">
-          <div class="panel-head">
-            <h3>서버가 보내 준 프로필</h3>
-            <code class="endpoint">GET /profile</code>
-          </div>
-          <div id="profile-out" class="profile-out">
-            <p class="muted">불러오는 중입니다.</p>
-          </div>
-          <details>
-            <summary>응답 JSON 보기</summary>
-            <pre id="profile-json">-</pre>
-          </details>
-        </div>
-
-        <!-- 방명록 -->
-        <div class="panel">
+      <div class="api-grid">
+        <div class="card panel">
           <div class="panel-head">
             <h3>방명록</h3>
             <code class="endpoint">GET · POST · DELETE /guestbook</code>
           </div>
-
           <form id="gb-form" class="gb-form" novalidate>
             <label>
               <span>이름</span>
               <input id="gb-name" name="name" maxlength="20" autocomplete="nickname" required>
             </label>
-            <label class="gb-msg">
+            <label>
               <span>한 줄 남기기 <small id="gb-count">0/200</small></span>
               <textarea id="gb-message" name="message" maxlength="200" rows="2" required></textarea>
             </label>
-            <button type="submit" id="gb-submit">남기기</button>
+            <button type="submit" id="gb-submit" class="btn btn-primary">남기기</button>
             <p id="gb-error" class="error" role="alert" hidden></p>
           </form>
-
           <ul id="gb-list" class="gb-list" aria-live="polite"></ul>
-          <p class="note">글은 서버 메모리에 저장됩니다. 무료 서버가 잠들었다 깨어나면 초기화됩니다.</p>
+        </div>
+
+        <div class="card panel">
+          <div class="panel-head">
+            <h3>서버가 보내 준 프로필</h3>
+            <code class="endpoint">GET /profile</code>
+          </div>
+          <div id="profile-out" class="profile-out"><p class="muted">불러오는 중입니다.</p></div>
+          <details>
+            <summary>응답 JSON 보기</summary>
+            <pre id="profile-json">-</pre>
+          </details>
+          <p class="api-base">API 주소 <code id="api-base"></code></p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="foot">
-    <p>
-      <a href="https://github.com/Seonho-oh-kaist/introduce" target="_blank" rel="noopener">GitHub 저장소</a>
-      <a href="mailto:seonho.oh@kaist.ac.kr">이메일</a>
-    </p>
-    <p class="muted">클라우드컴퓨팅실습 개인 과제 · 프론트엔드 Vercel, 백엔드 Render(FastAPI)</p>
+    <div class="foot-inner">
+      <p class="foot-links">
+        <a href="https://github.com/Seonho-oh-kaist/introduce" target="_blank" rel="noopener">GitHub 저장소</a>
+        <a href="mailto:your-email@example.com">이메일</a>
+      </p>
+      <p class="muted">클라우드컴퓨팅실습 개인 과제 · 프론트엔드 Vercel, 백엔드 Render(FastAPI)</p>
+    </div>
   </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 
   <script src="config.js"></script>
   <script src="script.js"></script>
