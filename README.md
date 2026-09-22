@@ -7,7 +7,7 @@ FastAPI 백엔드(Render)를 호출해 프로필과 방명록을 보여 줍니�
 
 | 구분 | 주소 |
 |---|---|
-| 자기소개 + 연동 페이지 (Vercel) | https://introduce.vercel.app |
+| 자기소개 + 연동 페이지 (Vercel) | https://introduce-three-rust.vercel.app |
 | 백엔드 Swagger UI (Render) | https://introduce-e129.onrender.com/docs |
 | GitHub 저장소 | https://github.com/Seonho-oh-kaist/introduce |
 
