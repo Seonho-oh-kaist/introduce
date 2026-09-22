@@ -181,4 +181,16 @@ class PostgresStore:
         return row, better + 1
 
 
-store = PostgresStore(DATABASE_URL) if DATABASE_URL else MemoryStore()
+def _build_store():
+    if not DATABASE_URL:
+        return MemoryStore()
+    try:
+        return PostgresStore(DATABASE_URL)
+    except ImportError:
+        # requirements.txt에 psycopg가 없는 채로 DATABASE_URL만 설정된 경우.
+        # 배포를 통째로 실패시키는 대신 메모리 모드로 조용히 내려간다.
+        print("[storage] DATABASE_URL is set but psycopg is not installed — falling back to memory store.")
+        return MemoryStore()
+
+
+store = _build_store()
