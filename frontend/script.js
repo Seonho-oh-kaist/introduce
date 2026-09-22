@@ -166,6 +166,7 @@ async function loadBoard(game, highlightId) {
   const list = $(`board-${game}`);
   try {
     const res = await api(`/scores/${game}?limit=10`);
+    if (res.status === 404) throw new Error("랭킹 기능이 아직 서버에 배포되지 않았어요.");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const rows = await res.json();
     list.replaceChildren();
@@ -186,7 +187,8 @@ async function loadBoard(game, highlightId) {
       list.appendChild(li);
     });
   } catch (e) {
-    list.innerHTML = `<li class="empty">랭킹을 불러오지 못했어요</li>`;
+    list.innerHTML = `<li class="empty"></li>`;
+    list.firstChild.textContent = e.message.includes("배포") ? e.message : "랭킹을 불러오지 못했어요";
   }
 }
 
@@ -223,6 +225,7 @@ function showResult(box, { game, title, sub, score, moves, onAgain }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, score, moves }),
       }, 20000);
+      if (res.status === 404) throw new Error("랭킹 기능이 아직 서버에 배포되지 않았어요. 백엔드를 최신 버전으로 업데이트해 주세요.");
       if (res.status === 422) throw new Error(explain422((await res.json()).detail));
       if (!res.ok) throw new Error(`서버 오류 (HTTP ${res.status})`);
       const saved = await res.json();
